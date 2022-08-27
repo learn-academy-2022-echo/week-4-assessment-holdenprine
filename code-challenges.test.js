@@ -65,20 +65,20 @@
 // Time:        0.47 s, estimated 1 s
 // Ran all test suites.
 
-// describe("shuffledArray",()=>{
-//     const expected = ["yellow", "blue", "pink", "green"]
-//     const expectedTwo = ["saffron", "aquamarine", "periwinkle", "indigo", "ochre"]
+describe("shuffledArray",()=>{
+    const expected = ["yellow", "blue", "pink", "green"]
+    const expectedTwo = ["saffron", "aquamarine", "periwinkle", "indigo", "ochre"]
 
-//     it("return an array with the first item removed and its contents shuffled",()=>{
-//         expect(shuffledArray(colors1)).toEqual(expect.arrayContaining(expected))
-//         expect(shuffledArray(colors2)).toEqual(expect.arrayContaining(expectedTwo))
-//     })
-//     it("does not match if recieved does not contain expected elements", ()=>{
-//         expect(["purple","yellow", "blue", "pink", "green"]).not.toEqual(expect.arrayContaining(expected))
-//         expect(["chartreuse","saffron", "aquamarine", "periwinkle", "indigo", "ochre"]).not.toEqual(expect.arrayContaining(expectedTwo))
-//     })
+    it("return an array with the first item removed and its contents shuffled",()=>{
+        expect(shuffledArray(colors1)).toEqual(expect.arrayContaining(expected))
+        expect(shuffledArray(colors2)).toEqual(expect.arrayContaining(expectedTwo))
+    })
+    it("does not match if recieved does not contain expected elements", ()=>{
+        expect(["purple","yellow", "blue", "pink", "green"]).not.toEqual(expect.arrayContaining(expected))
+        expect(["chartreuse","saffron", "aquamarine", "periwinkle", "indigo", "ochre"]).not.toEqual(expect.arrayContaining(expectedTwo))
+    })
     
-// })
+})
 
 
 const colors1 = ["purple", "blue", "green", "yellow", "pink"]
@@ -109,19 +109,48 @@ const shuffledArray = (array) => {
     return array
 }
 
+//BLOCKER: A little confused on the formatting of this particular test case. The function returns correctly yet the secondary condition is odd.
 
+// GOOD FAILURE:
+// FAIL  ./code-challenges.test.js
+// shuffledArray
+//   ✓ return an array with the first item removed and its contents shuffled (2 ms)
+//   ✕ does not match if recieved does not contain expected elements (3 ms)
+
+// ● shuffledArray › does not match if recieved does not contain expected elements
+
+//   expect(received).not.toEqual(expected) // deep equality
+
+//   Expected: not ArrayContaining ["yellow", "blue", "pink", "green"]
+//   Received:     ["purple", "yellow", "blue", "pink", "green"]
+
+//     75 |     })
+//     76 |     it("does not match if recieved does not contain expected elements", ()=>{
+//   > 77 |         expect(["purple","yellow", "blue", "pink", "green"]).not.toEqual(expect.arrayContaining(expected))
+//        |                                                                  ^
+//     78 |         expect(["chartreuse","saffron", "aquamarine", "periwinkle", "indigo", "ochre"]).not.toEqual(expect.arrayContaining(expectedTwo))
+//     79 |     })
+//     80 |     
+
+//     at Object.toEqual (code-challenges.test.js:77:66)
+
+// Test Suites: 1 failed, 1 total
+// Tests:       1 failed, 1 passed, 2 total
+// Snapshots:   0 total
+// Time:        0.56 s, estimated 1 s
+// Ran all test suites.
 
 
 // --------------------2) Create a function that takes in an object that contains up votes and down votes and returns the net total of votes.
 
 // a) Create a test with expect statements for each of the variables provided.
 
-// describe("totalVotes", ()=>{
-//     it("returns the total net number of votes", ()=>{
-//         expect(totalVotes(votes1)).toEqual(11)
-//         expect(totalVotes(votes2)).toEqual(-31)
-//     })
-// })
+describe("totalVotes", ()=>{
+    it("returns the total net number of votes", ()=>{
+        expect(totalVotes(votes1)).toEqual(11)
+        expect(totalVotes(votes2)).toEqual(-31)
+    })
+})
 
 // GOOD FAILURE:
 // FAIL  ./code-challenges.test.js
@@ -184,11 +213,11 @@ const totalVotes = (obj) => {
 
 // a) Create a test with an expect statement using the variables provided.
 
-// describe("noDupesArray", ()=>{
-//     it("return an array with no duplicate values from two arrays as given input.", ()=>{
-//         expect(noDupesArray(dataArray1, dataArray2)).toEqual(["array", "object", "number", "string", "Boolean", "null", "undefined"])
-//     })
-// })
+describe("noDupesArray", ()=>{
+    it("return an array with no duplicate values from two arrays as given input.", ()=>{
+        expect(noDupesArray(dataArray1, dataArray2)).toEqual(["array", "object", "number", "string", "Boolean", "null", "undefined"])
+    })
+})
 
 // GOOD FAILURE:
 // FAIL  ./code-challenges.test.js
