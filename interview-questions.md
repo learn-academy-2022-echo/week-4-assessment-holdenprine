@@ -10,7 +10,7 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
 Your answer: Object-oriented programming stems from the idea that containing data in the form of objects for organized performance of operations and manipulations is the premier means of structuring a program/ application. Inversely, functional programming has a focus on functions as a means of operating logic and handling data. These styles are generally applicable to any given framework or programming language yet OOP has taken hold as the industry favorite in structuring programs since objects became the standard for managing data. The concept of organizing meaningful information in objects goes hand in hand with the idea of seperation of concerns. As applications scale, the management of data and logic can become increasingly difficult. The organizational benefits to creating classes and objects makes the code base easier to interpret and maintain as all data can be traced back to a container and handler. 
 
-Researched answer:
+Researched answer: After more research I found my explaination of OOP suffices, yet theres some important considerations for why it's used so universally in software development. Firstly is its modularity that allows for easy debugging. With classes and objects being encapsulated, chasing bugs becomes much easier. Second is reusability. The modularity of objects makes refactoring and development easier as there are very tracable aspects to any code base that uses OOP. This in turn improves productivity as new developers to a code base using OOP can easily track the seperation of concerns which in turn provides crutial information on what does what. The last aspect I figure I should cover is its flexibility through a concept called polymorphism. Polymorphism allows an object the ability to change in a few different time lines in a programs runtime and optimally makes use of objects instantiation.
 
 2. What is the difference between a Float and an Integer in Ruby?
 
@@ -21,7 +21,7 @@ Your answer: There are all kinds of numbers that we have access to as programmer
 ```
 this is obviously incorrect and whats actually happening comes down to a binary level. In the analog world we use base ten in our counting system which comes in handy when expressing huge numbers, ie. scientific notation. Computers on the other hand use base 2 as then have to rely on binary. When expressing decimals in binary things can get complicated fast. For example take the number 0.1, in binary this is expressed as 0.000110011. For 0.2 it is expressed as 0.00110011001100. As you do the math you come to see the issue which has been mitigated by rounding methods and built in handlers for languages like JavaScript and many more. In all thats the basic difference.
 
-Researched answer:
+Researched answer: 
 
 3. Ruby has an implicit return. What does that mean?
 
@@ -31,7 +31,7 @@ Researched answer:
 
 4. What is a block in Ruby?
 
-Your answer:
+Your answer: At their core ruby blocks are anonymous methods that are encapsulated in do/end statements that defines their scope.
 
 Researched answer:
 
